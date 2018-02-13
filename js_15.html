@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js-15</title>
+</head>
+<body>
+
+<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg" id="first">
+<!-- dice -->
+
+
+<form>
+	 <input type="button" id="prev" Value="next" onclick="changenext()">
+	 <input type="button" id="next" Value="previous" onclick="changeprev()">
+</form>
+
+<script type="text/javascript">
+	var num = 0;
+
+
+	function hideprev(){
+  	var prevbutton = document.getElementById('prev');
+  	if(num === 0){
+  		prevbutton.style.display='none';
+  	} 
+  	 }
+
+
+  function hidenext(){
+  	var nextbutton = document.getElementById('next');
+    if(num === 3){
+  		nextbutton.style.display = 'none';
+  	}
+  }
+
+
+   function changenext(){
+   	if(num===0){
+   		  document.getElementById("first").src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg";//dice
+             hideprev();
+        num++;
+   	}
+	if(num===1){
+        document.getElementById("first").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpBbsE8AEvOpUvj0dGm0dGd94jDh1UbDPrXXKyvVDryycSq0jzg";//owl
+        num++;
+	}
+	else if(num===2){
+        document.getElementById("first").src="http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg"; //tree
+        num++;
+	}
+	else if(num===3){
+          document.getElementById("first").src="https://www.newton.ac.uk/files/covers/968361.jpg";//lights
+          hidenext();
+          num--;
+	}
+}
+
+function changeprev(){
+   if(num===0){
+        document.getElementById("first").src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg";//dice
+	}
+	else if(num===1){
+        document.getElementById("first").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpBbsE8AEvOpUvj0dGm0dGd94jDh1UbDPrXXKyvVDryycSq0jzg";//owl
+        num--;
+	}
+	else if(num===2){
+         document.getElementById("first").src="http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg";
+        num--;//tree
+	}
+}
+	
+</script>
+</body>
+</html>

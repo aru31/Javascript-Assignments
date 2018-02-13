@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		js-10
+	</title>
+</head>
+<body>
+
+<div id="one">
+<img src="http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" height="300">
+</div>
+
+<div id="two">
+<img src="https://www.newton.ac.uk/files/covers/968361.jpg" height="300">
+</div>
+
+<div id="three">
+<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg" height="300">
+</div>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpBbsE8AEvOpUvj0dGm0dGd94jDh1UbDPrXXKyvVDryycSq0jzg" height="300"  onmouseover = "change()" onmouseout="back()">
+
+<script type="text/javascript">
+	function change() {
+        document.getElementById("one").innerHTML = "<img src='https://cdn.shopify.com/s/files/1/1685/6161/products/Fidget_Spinners_-_Round_Black_Metal_Front_250x250@2x.jpg?v=1495132066' />";
+
+         document.getElementById("two").innerHTML = "<img src='https://cdn.shopify.com/s/files/1/1685/6161/products/Fidget_Spinners_-_Round_Black_Metal_Front_250x250@2x.jpg?v=1495132066' />" ;
+
+          document.getElementById("three").innerHTML = "<img src='https://cdn.shopify.com/s/files/1/1685/6161/products/Fidget_Spinners_-_Round_Black_Metal_Front_250x250@2x.jpg?v=1495132066' />";
+	}
+
+	function back() {
+		 document.getElementById("one").innerHTML = "<img src='http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg' />";
+
+         document.getElementById("two").innerHTML = "<img src='https://www.newton.ac.uk/files/covers/968361.jpg' />";
+
+          document.getElementById("three").innerHTML = "<img src='https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg' />";
+	}
+	
+</script>
+
+</body>
+</html>

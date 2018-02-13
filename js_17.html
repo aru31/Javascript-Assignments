@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js18</title>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+    var sub;
+    function opengoogle(){
+        sub = window.open("https://www.google.com",
+            "","height=500,width=500");
+    }
+    function closegoogle(){
+          sub.close()
+    }
+
+    
+</script>
+
+
+<img src="https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z.jpg" onclick="opengoogle()">
+
+
+<form>
+  <input type="button" value="off_google" onclick="closegoogle()">   
+</form>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js-16</title>
+</head>
+<body>
+<div id="content"  id="images" onmouseover="stop()" onmouseout="start()" >
+
+	<h2>JavaScript Materials</h2>
+
+	<h1>Marbles</h1>
+
+<table >
+
+<tr valign="top" align="center"><td>
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img0">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img1">
+</td></tr>
+
+<tr valign="top" align="center"><td>
+&nbsp;<br><br>
+</td></tr>
+
+<tr valign="top" align="center"><td>
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img5" >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img7" >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img2" >
+</td></tr>
+
+<tr valign="top" align="center"><td>
+&nbsp;<br><br>
+</td></tr>
+
+
+
+<tr valign="top" align="center"><td>
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img4" >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="http://www.webhammer.com/javascript/materials/marble1.jpg" id="img3" >
+</td></tr>
+
+
+</table>
+
+</div>
+
+<script type="text/javascript">
+ var num =0;
+var timerid;
+          function start(){
+          	
+      
+       console.log(num);
+
+       var i;
+            for(i =0; i<num; i+=1){
+                document.getElementById("img" +i).src = "http://www.webhammer.com/javascript/materials/marble1.jpg";
+               
+        }
+         for(i =(num+1); i<6; i+=1){
+                document.getElementById("img" +i).src = "http://www.webhammer.com/javascript/materials/marble1.jpg";
+               
+        }
+
+               document.getElementById("img" +num).src = "http://cdn.memphisnet.net/images/uploads/SmallBall130.jpg";
+
+               num++;
+               if(num===6){
+               	num=0;
+               }
+                  timerid = setTimeout("start()", 1000);
+          }  
+//check stop function
+          function stop(){
+              clearTimeout(timerid);
+          }
+
+</script>
+
+<body onload="setTimeout('start()', 1000)">
+</body>
+</html>

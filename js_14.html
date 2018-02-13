@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js-14</title>
+</head>
+<body>
+
+<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg" onclick="changeit(this)">
+
+<script type="text/javascript">
+	var num = 0;
+
+   function changeit(qwerty){
+	if(num===0){
+        qwerty.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpBbsE8AEvOpUvj0dGm0dGd94jDh1UbDPrXXKyvVDryycSq0jzg";
+        num++;
+	}
+	else if(num===1){
+         qwerty.src = "http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg";
+        num++;
+	}
+	else if(num===2){
+          qwerty.src = "https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg";
+        num++;
+	}
+	else if(num===3){
+          qwerty.src = "https://www.newton.ac.uk/files/covers/968361.jpg";
+        num++;
+	}
+
+}
+
+</script>
+</body>
+</html>

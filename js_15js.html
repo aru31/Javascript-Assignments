@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js15</title>
+</head>
+<body>
+
+
+<img id = 'img' src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg"  width="400px" height="400px">
+
+<form>
+<input type="button" id='next' name="next" value="next" onclick="change(this)">
+    <input id='pre' type="button" name="previous" value= "previous" onclick="change(this)">
+    
+
+</form>
+
+<script type="text/javascript">
+  var num=0;
+
+  if(num == 0){
+    hidenext();
+  }
+
+  function change(clickbutton){
+        if(clickbutton.value == "next"){
+            num = num + 1;
+        }else{
+          num = num - 1;
+        }
+
+        if (num==0){
+          x = document.getElementById('img')
+          x.src="https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg";
+          hidenext();
+      
+    }
+        if (num==1){
+          x = document.getElementById('img')
+      x.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpBbsE8AEvOpUvj0dGm0dGd94jDh1UbDPrXXKyvVDryycSq0jzg";
+      show();
+    }
+    else if(num==2){
+            x = document.getElementById('img')
+      x.src="http://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg";
+      show();
+    }
+    else if(num==3){
+      x = document.getElementById('img')
+      x.src="https://www.newton.ac.uk/files/covers/968361.jpg";
+      show();
+        }
+        else if(num==4){
+          x = document.getElementById('img')
+      x.src="http://www.webhammer.com/javascript/materials/marble1.jpg";
+      hideprev();
+    }
+    else if(num>4){
+      num=4
+      hideprev();
+    }
+  }
+  function hidenext(){
+    var object1=document.getElementById('pre');
+    if(num==0){
+      object1.style.display='none';
+    }  }
+  function hideprev(){
+    var object2=document.getElementById('next');
+    if(num==4){
+      object2.style.display='none';
+    }
+  }
+  function show(){
+    var object1=document.getElementById('pre');
+    var object2=document.getElementById('next');
+    if(num!=0 && num!=4){
+      object1.style.display='initial';
+      object2.style.display='initial';
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mad-Libs js-7</title>
+</head>
+<body>
+
+<div id="mad" style="display: inline;"></div>
+
+<script type="text/javascript">
+		   var name=window.prompt("Enter your name: ");
+           var i;
+           var string = "";
+		   var arr = [];
+		   for( i = 0; i<5; i= i+1){
+		   	arr[i] = prompt("Enter the " +(i+1)+ " Word");
+		   	 string = string + arr[i];
+		   }
+
+		   var color = prompt("Enter a color name or Hex value");
+
+	document.getElementById("mad").innerHTML = string;
+
+    document.getElementById("mad").style.backgroundColor = color;
+         
+
+</script>
+</body>
+</html>
