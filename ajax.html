@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax_requests</title>
+</head>
+<body>
+
+<form name="myform" onsubmit="return false">
+    
+       <tr>
+            <th><label for="username">Name</label></th>
+            <td><input type="text" id="username" name="username" required /></td>
+       </tr>
+
+         <tr>
+            <th><label for="password">Password</label></th>
+            <td><input type="text" id="password" name="password" required /></td>
+         </tr>
+
+          <input type="submit" value="Submit" onclick="loadDoc()" />
+
+<p id="demo"></p>
+
+</form>
+
+<script>
+
+function loadDoc() {
+	var obj = "";
+	var name = document.forms["myform"]["username"].value;
+	var password = document.forms["myform"]["password"].value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      JSON.parse(this.responseText).combination;
+    }
+  };
+  xhttp.open("POST","http://192.168.121.187/first_year/dhruv/my_machau_api/login_demo.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("username="+name+"&password="+encodeURI(password));
+}
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
