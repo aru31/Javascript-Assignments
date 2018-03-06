@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src="cookies.js"></script>
+
+
+<script type="text/javascript">
+
+  
+  function NumofVisits() {    
+      var visits = GetCookie("visits"); 
+      //i.e visits already set
+      if (visits){
+      	visits = parseInt(visits) + 1;
+      }
+      else{ 
+      	visits = 1;
+      	} 
+  
+      if (visits==1){
+       document.write("You never visited before");
+       } 
+    else{ 
+     document.write("You have visited this page " + visits + " times.");} 
+  
+      var today = new Date(); 
+      today.setTime(today.getTime() + 365*24*60*60*1000); 
+      SetCookie("visits", visits, today); 
+
+      
+  } 
+  
+NumofVisits();
+
+</script>
+
+</body>
+</html>
