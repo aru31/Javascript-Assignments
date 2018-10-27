@@ -1,6 +1,7 @@
 .login_page{
   position: relative;
   margin-top: 10%;
+  margin-bottom: 10%;
   padding: 40px;
   margin-right:15%; 
   margin-left: 20%;
@@ -15,7 +16,7 @@ min-width: 510px;
 }
  
  form input[type="text"]:focus{
-  background-color: lightgrey;
+  background-color: grey;
 }
 
 .login_page form input[type="submit"] {
@@ -27,7 +28,7 @@ min-width: 510px;
     border-radius: 4px;
     font-size: 16px;
     padding: 14px 0 16px;/*0 is for left and right*/
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 
 .login_page form input[type="submit"]:hover {
